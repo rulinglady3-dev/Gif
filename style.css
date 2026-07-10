@@ -1,0 +1,103 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    height: 100vh;
+    background: #111;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    font-family: Arial, sans-serif;
+}
+
+/* Zarf */
+#envelope-container {
+    font-size: 100px;
+    cursor: pointer;
+    animation: shake 1.5s infinite;
+}
+
+/* Mektup alanı */
+#letter-container {
+    display: none;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+}
+
+/* Mektup */
+.letter-window {
+    width: 350px;
+    padding: 30px;
+    background: white;
+    border-radius: 20px;
+    text-align: center;
+    transform: scale(0);
+    transition: 0.5s;
+}
+
+/* Açılma */
+.letter-window.open {
+    transform: scale(1);
+}
+
+.letter-window.final {
+    background: #ffe6f2;
+}
+
+/* Yazı */
+#letter-title {
+    color: #ff4d88;
+    font-size: 25px;
+}
+
+/* Kedi */
+#letter-cat {
+    width: 150px;
+    height: 150px;
+    object-fit: contain;
+}
+
+/* Butonlar */
+.btn {
+    padding: 12px 25px;
+    margin: 10px;
+    border: none;
+    border-radius: 20px;
+    cursor: pointer;
+    font-size: 18px;
+}
+
+.yes-btn {
+    background: #ff4d88;
+    color: white;
+}
+
+.no-btn {
+    background: #ddd;
+}
+
+/* Son yazı */
+#final-text {
+    display: none;
+    font-size: 22px;
+    color: #ff4d88;
+    margin-top: 20px;
+}
+
+
+/* Zarf hareketi */
+@keyframes shake {
+    0%,100% {
+        transform: rotate(0);
+    }
+    25% {
+        transform: rotate(5deg);
+    }
+    75% {
+        transform: rotate(-5deg);
+    }
+}
